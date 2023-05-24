@@ -5,6 +5,11 @@
     font-family: 'Lilita One', cursive;
 }
 
+:root {
+    --hue-wrong: 0;
+    --hue-correct: 145;
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -49,12 +54,12 @@ body {
     border-color: #38003c;
 }
 
-.button-correct {
-
+.btn.correct {
+    --hue: var(--hue-correct);
 }
 
-.btn-wrong {
-
+.btn.wrong {
+    --hue: var(--hue-wrong);
 }
 
 .start-btn, .next-btn {

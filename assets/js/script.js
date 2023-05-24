@@ -4,8 +4,9 @@ const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer')
 
-
+let score = document.getElementById('score')
 let shuffledQuestions, currentQuestionIndex
+score = 0;
 
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {

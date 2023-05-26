@@ -6,11 +6,13 @@
 }
 
 :root {
-    --hue-wrong: 0;
+    --hue-wrong: 338;
     --hue-correct: 145;
+    --hue-btn: 182;
 }
 
 body {
+
     padding: 0;
     margin: 0;
     display: flex;
@@ -18,7 +20,7 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background-color: #07F2F2;
+    background-color: #340040;
 }
 
 .container {
@@ -38,12 +40,12 @@ body {
 }
 
 .btn {
-    border: 2px solid;
+    --hue: var(--hue-btn);
+    border: 2px solid hsl(var(--hue), 96%, 31%);
+    background-color: hsl(var(--hue), 100%, 51%);
     border-radius: 10px;
     padding: 10px 20px;
     outline: none;
-    color: white;
-    background-color: #F2055C;
 }
 
 #question {
@@ -51,7 +53,7 @@ body {
 }
 
 .btn:hover {
-    border-color: #38003c;
+    border-color:black;
 }
 
 .btn.correct {

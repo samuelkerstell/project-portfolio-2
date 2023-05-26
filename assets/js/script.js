@@ -4,9 +4,9 @@ const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer')
 
-let score = document.getElementById('score')
+let scoreCounter = 0;
+let scoreElement = document.getElementById('score')
 let shuffledQuestions, currentQuestionIndex
-score = 0;
 
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
@@ -16,10 +16,12 @@ nextButton.addEventListener('click', () => {
 
 function startGame() {
     startButton.classList.add('hide')
-    shuffledQuestions = QUESTIONS.sort(() => Math.random() - .5)
+    shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     questionContainerElement.classList.remove('hide')
     setNextQuestion()
+    scoreCounter = 0
+    scoreElement.innerText = "Score: " + scoreCounter
 }
 
 function setNextQuestion() {
@@ -35,6 +37,7 @@ function showQuestion(question) {
         button.classList.add('btn')
         if (answer.correct) {
             button.dataset.correct = answer.correct
+            scoreElement.innerText = "Score: " + scoreCounter
         }
         button.addEventListener('click', selectAnswer)
         answerButtonsElement.appendChild(button)
@@ -55,14 +58,22 @@ function selectAnswer(event) {
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     })
+
+    if (correct) {
+        scoreCounter++
+        console.log('CORRECT')
+    }
+
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide')
     } else {
         startButton.innerText = 'Restart'
         startButton.classList.remove('hide')
+        scoreElement.innerText = "Your final score is: "+ scoreCounter
     }
     
 }
+
 
 function setStatusClass(element, correct) {
     clearStatusClass(element)
@@ -78,7 +89,7 @@ function clearStatusClass(element) {
     element.classList.remove('wrong')
 }
 
-const QUESTIONS = [
+const questions = [
     {
      question: "Which team has won the most Premier League titles?",
      answer: [
@@ -92,9 +103,10 @@ const QUESTIONS = [
         question: "Which is the only team who has won the Premier League without losing a single game?",
         answer: [
            { text: 'Manchester United', correct: false },
-           { text: 'Liverpool', correct: false },
            { text: 'Arsenal', correct: true },
+           { text: 'Liverpool', correct: false },
            { text: 'Chelsea', correct: false },
        ]
        },
 ]
+

@@ -100,7 +100,7 @@ const questions = [
     ]
     },
     {
-        question: "Which is the only team who has won the Premier League without losing a single game?",
+        question: "Who is the only team to win the Premier League without losing a single game?",
         answer: [
            { text: 'Manchester United', correct: false },
            { text: 'Arsenal', correct: true },

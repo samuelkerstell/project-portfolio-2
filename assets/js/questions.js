@@ -26,4 +26,13 @@ const QUESTIONS = [
            { text: 'Alan Shearer', correct: true },
        ]
        },
+    {
+        question: "Which team has the most points in a single season?",
+        answer: [
+           { text: 'Liverpool', correct: false },
+           { text: 'Chelsea', correct: false },
+           { text: 'Manchester City', correct: true },
+           { text: 'Manchester United', correct: false },
+       ]
+       },
 ]

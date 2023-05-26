@@ -13,6 +13,8 @@ let scoreElement = document.getElementById('score')
 let shuffledQuestions = [];
 let currentQuestionIndex = 0;
 
+let newh1 = document.createElement("h1");
+
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++
@@ -44,7 +46,14 @@ function showResult() {
     startButton.innerText = 'Restart'
     startButton.classList.remove('hide')
     submitButton.classList.add('hide')
-    resultElement.innerText = "Your final score is: "+ + scoreCounter
+
+    if (scoreCounter === 3) {
+        resultElement.innerText = "Congrats you got maximum points!\n\nYour total score: "+scoreCounter
+    } else if (scoreCounter > 2) {
+        resultElement.innerText = "Great job your final score is: "+ scoreCounter; + "/3"
+    } else {
+        resultElement.innerText = 'Your final score is: '+ scoreCounter + "/3" + '\n\nTry again and see if you can beat it.'
+    }
 }
 
 
@@ -105,25 +114,4 @@ function clearStatusClass(element) {
     element.classList.remove('correct')
     element.classList.remove('wrong')
 }
-
-const QUESTIONS = [
-    {
-     question: "Which team has won the most Premier League titles?",
-     answer: [
-        { text: 'Arsenal', correct: false },
-        { text: 'Liverpool', correct: false },
-        { text: 'Manchester United', correct: true },
-        { text: 'Manchester City', correct: false },
-    ]
-    },
-    {
-        question: "Who is the only team to win the Premier League without losing a single game?",
-        answer: [
-           { text: 'Manchester United', correct: false },
-           { text: 'Arsenal', correct: true },
-           { text: 'Liverpool', correct: false },
-           { text: 'Chelsea', correct: false },
-       ]
-       },
-]
 

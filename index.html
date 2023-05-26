@@ -15,8 +15,33 @@
             <h1>Premier League Quiz</h1>
         </div>
     </header>
-
-    <div class="container">
+    <div class="instruction-container div-container">
+        <div>
+            <h2>How to play</h2>
+            <ol>
+                <li>
+                    Press the start button.
+                </li>
+                <li>
+                    Read the question and choose an answer.
+                </li>
+                <li>
+                    Click the button with your answer.
+                </li>
+                <li>
+                    If the button you click turns green your answer was right.
+                    If the button you click turns red your answer was wrong.
+                </li>
+                <li>
+                    After you answered press the next button.
+                </li>
+                <li>
+                    Finish all the questions and press submit to view your result!
+                </li>
+            </ol>
+        </div>
+    </div>
+    <div class="container div-container">
         <div id="question-container" class="hide">
             <div id="question">Question</div>
             <div id="answer" class="btn-grid">
@@ -30,16 +55,20 @@
 
         <div id="result-container" class="result-container hide">
             <span id="result">
-                Your final score is: 
+                Your final score is:
+
             </span>
         </div>
-        
+
         <div class="controls">
             <button id="start-btn" class="start-btn btn">Start</button>
             <button id="next-btn" class="next-btn btn hide">Next</button>
             <button id="submit-btn" class="submit-btn btn hide">Submit</button>
         </div>
     </div>
+
+
+    <script src="assets/js/questions.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 

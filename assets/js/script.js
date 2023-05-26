@@ -1,12 +1,17 @@
-const startButton = document.getElementById('start-btn')
-const nextButton = document.getElementById('next-btn')
-const questionContainerElement = document.getElementById('question-container')
-const questionElement = document.getElementById('question')
-const answerButtonsElement = document.getElementById('answer')
+let startButton = document.getElementById('start-btn')
+let nextButton = document.getElementById('next-btn')
+let submitButton = document.getElementById('submit-btn')
+
+let questionContainerElement = document.getElementById('question-container')
+let questionElement = document.getElementById('question')
+let resultContainerElement = document.getElementById('result-container')
+let resultElement = document.getElementById('result')
+let answerButtonsElement = document.getElementById('answer')
 
 let scoreCounter = 0;
 let scoreElement = document.getElementById('score')
-let shuffledQuestions, currentQuestionIndex
+let shuffledQuestions = [];
+let currentQuestionIndex = 0;
 
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
@@ -14,20 +19,34 @@ nextButton.addEventListener('click', () => {
     setNextQuestion()
 })
 
+submitButton.addEventListener('click', showResult)
+
+
 function startGame() {
     startButton.classList.add('hide')
-    shuffledQuestions = questions.sort(() => Math.random() - .5)
+    shuffledQuestions = QUESTIONS.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     questionContainerElement.classList.remove('hide')
     setNextQuestion()
     scoreCounter = 0
     scoreElement.innerText = "Score: " + scoreCounter
+    resultContainerElement.classList.add('hide')
 }
 
 function setNextQuestion() {
     resetState()
     showQuestion(shuffledQuestions[currentQuestionIndex])
 }
+
+function showResult() {
+    resultContainerElement.classList.remove('hide')
+    questionContainerElement.classList.add('hide')
+    startButton.innerText = 'Restart'
+    startButton.classList.remove('hide')
+    submitButton.classList.add('hide')
+    resultElement.innerText = "Your final score is: "+ + scoreCounter
+}
+
 
 function showQuestion(question) {
     questionElement.innerText = question.question
@@ -67,9 +86,7 @@ function selectAnswer(event) {
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide')
     } else {
-        startButton.innerText = 'Restart'
-        startButton.classList.remove('hide')
-        scoreElement.innerText = "Your final score is: "+ scoreCounter
+        submitButton.classList.remove('hide')
     }
     
 }
@@ -89,7 +106,7 @@ function clearStatusClass(element) {
     element.classList.remove('wrong')
 }
 
-const questions = [
+const QUESTIONS = [
     {
      question: "Which team has won the most Premier League titles?",
      answer: [

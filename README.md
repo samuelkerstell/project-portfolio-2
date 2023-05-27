@@ -1,108 +1,173 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Premier League Quiz
 
-Welcome Samuel Kerstell,
+## Welcome!
+[View the live project here]()
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+This website is designed to showcase up-and-coming producers and artists and provide a platform for them to promote their music to a wider audience.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+![Different screen sizes]()
 
-## Gitpod Reminders
+# Features
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Existing Features
 
-`python3 -m http.server`
+* ### Header
+  * Easily navigate through the website using the top navigation bar.
+  * Can be seen on both pages, includes the logo and the navigation bar.
+  * Navigation bar includes: Music Gallery, About Us, Contact Us. This will link to the different sections of the page.
+  * The navigation bar is valuable for users as it provides quick and easy access to important sections of the website.
 
-A blue button should appear to click: _Make Public_,
+![Screenshot of the navigation bar.](readme-doc/navigation-bar.jpg)
 
-Another blue button should appear to click: _Open Browser_.
+* ### How to play container
+  * 
+  * 
+  * 
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+![Screenshot of the How to play section](readme-doc/landing-page-image.jpg)
 
-A blue button should appear to click: _Make Public_,
+* ### Quiz Container
+  * Users can discover new and exciting music form up-and-coming artists.
+  * This is valuable for artist looking for new ways to showcase their work.
+  * This is valuable for visitors searching for new music.
 
-Another blue button should appear to click: _Open Browser_.
+![Screenshot of quiz container](readme-doc/music-gallery.jpg)
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+* ### The game result
+  * 
+  * 
 
-To log into the Heroku toolbelt CLI:
+![Screenshot of The game result](readme-doc/send-music.jpg)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+* ### Background Image
+  * 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+  ![Screenshot of the Background image](readme-doc/confirmation.png)
 
-------
 
-## Release History
+## Future Features
+ ### Music Gallery page.
+ * In the future I would like to add a system that would save the users high score.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+# Testing
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+## Testing User Stories
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+| `Goals` | `How Are They Achieved?` |
+| ----- | ---------------------- |
+| `First time visitors` | |
+| Understand what the site is and how to play the quiz. | The How to play container gives the user a good understanding of what the site is about. |
+| Learn more about the Premier League  | By listening to music in the music gallery. |
+| Send in their music.       | The "Send In Your Music!" encourages users to send in their own music. |
+| `Returning Visitors`   |
+| To come back and find new music in the music gallery. | By updating the music gallery regularly. |
+| Send in their latest music. | By promoting their past work in the music gallery. |
+| `Admin User`           |
+| Review music sent in | Listening to the sent in music |
+| Updating the music gallery | By adding the new music sent in from visitors to the music gallery. |
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+## Full Testing
+Full testing was performed on the following devices:
+* PC:
+  * Desktop PC
+* Laptop:
+  * Macbook Air 2021 13.6-inch screen
+* Mobile Devices:
+  * iPhone 13.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+Desktop PC tested the site using the following browsers:
+* Google Chrome
+* Opera
+* Firefox
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+The Apple devices tested the site using the following browsers:
+* Safari
+* Google Chrome
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+I've confirmed that the site is responsive and looks good on different screen sizes.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+| `Feature` | `Expected Outcome` | `Testing Performance` | `Result` | `Pass/Fail`|
+| ----------|--------------------|-----------------------|----------|------------|
+| `Navbar`  | |
+| Logo               | When clicked the user will be redirected to the Home Page  | Clicked link  |  Redirected to the Home Page  | Pass |
+| Music Gallery      | When clicked the user will be redirected to the Music Gallery  | Clicked link  | Redirected to the Music Gallery  | Pass |
+| About Us           | When clicked the user will be redirected to the About Us  | Clicked link  | Redirected to the About Us  | Pass |
+| Contact Us         | When clicked the user will be redirected to the Contact Us  | Clicked link  | Redirected to the Contact Us  | Pass |
+|  | | | | |
+| `Music Gallery` |  |
+| Press Play Button  | When clicked user will be able to hear the song  | Clicked on play button   | Song starts playing  | Pass |
+| Press Pause Button | When clicked user will be able to pause song     | Clicked on pause button  | Song pauses          | Pass |
+| Press Mute Button  | When clicked user will be able to mute the song  | Clicked on mute button   | Audio is muted       | Pass |
+| | | | | |
+| `Send In Your Music!`
+| Email Input Empty       | The Email is a required field, so should not submit with no value       | Tried to submit form with no value entered    | Tooltip lets user know this value is required      | Pass |
+| Email Input             | Entered plain text                                                     | Tried to submit form with no @ symbol entered | Tooltip lets user know an email address is required here | Pass |
+| Name Input Empty        | The Name is a required field, so should not submit with no value        | Tried to submit form with no value entered    | Tooltip lets user know this value is required      | Pass |
+| Song Name Input Empty   | The Song Name is a required field, so should not submit with no value   | Tried to submit form with no value entered    | Tooltip lets user know this value is required      | Pass |
+| No File Choosen         | The choose file button is a required field, so should not submit with no value | Tried to submit form with no value entered | Tooltip lets user know selecting a file is required | Pass|
+| Choose File Button      | User chooses file and will get a visual confirmation file is choosen    | Press choose file button and chooses file     | File name shows up to the right of the button      | Pass |
+| Submit Button           | Redirected to a new page with confirmation that the song has been sent  | Tried to submit form with correct values entered | Redirected to the confirmation page with confirmation message | Pass |
+| | | | | |
+| `Confirmation Page` |
+| Home Page Link | When clicked user will be redirected to the Home Page | Clicked on link | Redirected to the Home Page  | Pass |
+| | | | | |
+| `Footer` |
+| Spotify Icon | When clicked user will be redirected to https://open.spotify.com/? in a new tab          | Clicked Spotify icon    | https://open.spotify.com/? opened in a new tab       | Pass |
+| Soundcloud Icon | When clicked user will be redirected to https://soundcloud.com/skerstell in a new tab | Clicked Soundcloud icon | https://soundcloud.com/skerstell opened in a new tab | Pass |
+| YouTube Icon | When clicked user will be redirected to https://www.youtube.com in a new tab             | Clicked YouTube icon    | https://www.youtube.com opened in a new tab          | Pass |
+| Instagram Icon | When clicked user will be redirected to https://instagram.com/ in a new tab            | Clicked Instagram icon  | https://instagram.com/ opened in a new tab           | Pass |
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+### Bugs
+Fieldset styling is not working properly in firefox.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+#### Solved Bugs
+* Whenever I tried to send in a file I would just get the "Error code: 501".
+ To resolve this I made a new html file and added confirmation.html to the form action.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+* The site was experiencing horizontal scrolling on devices with a width of less than 305px. To resolve this, I applied the following code:
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+![Bug Fix](readme-doc/bug2.jpg)
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+## Validation Testing
+* HTML
+  * No errors were returned when passing through the official [W3C validator](https://validator.w3.org)
+* CSS
+  * No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/)
+* Accessibility
 
-------
+![Screenshot of the Lighthouse Pagespeed](readme-doc/lighthouse22.png)
 
-## FAQ about the uptime script
+# Technologies Used
 
-**Why have you added this script?**
+## Frameworks, Libaries & Progams Used
+  * Hover:css was used on the navigation bar and the submit button to show a transition when hovered over.
+  * [Google Fonts](https://fonts.google.com) was used to import the 'Prompt' font in the style.css file which is used on all text of the website.
+  * [Font awesome](https://fontawesome.com) was used for the icons in the footer.
+  * [Git](https://gitpod.io) was used for version control system to manage code changes, and the Gitpod terminal to commit those changes to Git and push them to GitHub.
+  * [GitHub](https://github.com) was used to store the project code after being pushed from gitpod.
+  * [Balsamiq](https://balsamiq.cloud) was used for wireframe.
+  * [compressor.io](https://compressor.io) was used to compress the landing page image.
+  * [ChatGPT](https://chat.openai.com) was used to improve copyright.
+ ## Languages Used
+ * HTML5
+ * CSS3
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+# Deployment
+* The site was deployed to GitHub pages. The steps to deploy are as follows:
+  * In the GitHub repository, navigate to the Settings tab
+  * From the source section drop-down menu, select the Master Branch
+  * Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+The live link can be found here - [Sam's Music Blog](https://samuelkerstell.github.io/portfolio-project-1/index.html)
 
-**How will this affect me?**
+# Credits
+## Code Used
+ * The CSS on the footer was taken from the [Love Running Project](https://github.com/samuelkerstell/love-running)
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+## Content
+* Instructions on how stick the footer to the bottom of the page was taken form this [page](https://dev.to/nehalahmadkhan/how-to-make-footer-stick-to-bottom-of-web-page-3i14)
+* Instructions on how to style audio elements was taken from this [blog page](https://blog.shahednasser.com/how-to-style-an-audio-element/)
+* Instructions on how to center an audio element was take from this [page](https://stackoverflow.com/questions/16823868/center-html-5-audio-players-for-all-browsers)
+## Media
+* The landing page image was taken from [Pexels](https://www.pexels.com/photo/grayscale-photography-of-person-using-dj-controller-860707/)

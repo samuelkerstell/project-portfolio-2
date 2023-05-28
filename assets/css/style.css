@@ -1,3 +1,4 @@
+/* Fonts & Structural CSS */
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
 
 *, *::before, *::after {
@@ -21,15 +22,17 @@ body {
     color: white;
 }
 
-header {
-    
-}
-
+/* Header section */
 h1 {
     color: white;
     font-size: 300%;
 }
 
+a {
+    text-decoration: none;
+}
+
+/* Instruction section */
 .instruction-container {
     box-sizing: border-box;
     width: 800px;
@@ -49,6 +52,7 @@ li {
     text-align: left;
 }
 
+/* Quiz Area */
 .container {
     box-sizing: border-box;
     width: 800px;

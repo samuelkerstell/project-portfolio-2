@@ -12,10 +12,9 @@ This website is designed to showcase up-and-coming producers and artists and pro
 ## Existing Features
 
 * ### Header
-  * Easily navigate through the website using the top navigation bar.
-  * Can be seen on both pages, includes the logo and the navigation bar.
-  * Navigation bar includes: Music Gallery, About Us, Contact Us. This will link to the different sections of the page.
-  * The navigation bar is valuable for users as it provides quick and easy access to important sections of the website.
+  * Shows the name of the site
+  * When clicked you get back to the home page.
+  * The header is valuable for users because it makes it obvious for the user what the site is about.
 
 ![Screenshot of the navigation bar.](readme-doc/navigation-bar.jpg)
 
@@ -33,6 +32,12 @@ This website is designed to showcase up-and-coming producers and artists and pro
 
 ![Screenshot of quiz container](readme-doc/music-gallery.jpg)
 
+* ### The Quiz Options
+  * 
+  * 
+
+![Screenshot of The game result](readme-doc/send-music.jpg)
+
 * ### The game result
   * 
   * 
@@ -46,7 +51,7 @@ This website is designed to showcase up-and-coming producers and artists and pro
 
 
 ## Future Features
- ### Music Gallery page.
+ ### High Score System.
  * In the future I would like to add a system that would save the users high score.
 
 # Testing

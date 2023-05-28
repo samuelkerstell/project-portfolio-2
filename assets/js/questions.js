@@ -1,3 +1,4 @@
+// Creates questions with answers with only one correct answer
 const QUESTIONS = [
     {
      question: "Which team has won the most Premier League titles?",

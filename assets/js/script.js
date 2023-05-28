@@ -56,12 +56,12 @@ function showResult() {
     startButton.classList.remove('hide')
     submitButton.classList.add('hide')
 
-    if (scoreCounter === 4) {
-        resultElement.innerText = "Congrats you got maximum points!\n\nYour total score: "+scoreCounter
-    } else if (scoreCounter > 2) {
-        resultElement.innerText = "Great job your final score is: "+ scoreCounter; + "/4"
+    if (scoreCounter === 6) {
+        resultElement.innerText = "Congrats you got maximum points!\n\nYour final is score: "+scoreCounter
+    } else if (scoreCounter > 3) {
+        resultElement.innerText = "Great job your final score is: "+ scoreCounter; + "/6"
     } else {
-        resultElement.innerText = 'Your final score is: '+ scoreCounter + "/4" + '\n\nTry again and see if you can beat it.'
+        resultElement.innerText = 'Your final score is: '+ scoreCounter + "/6" + '\n\nTry again and see if you can beat it.'
     }
 }
 

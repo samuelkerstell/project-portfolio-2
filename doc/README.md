@@ -26,7 +26,7 @@ This website is designed to showcase up-and-coming producers and artists and pro
 ![Screenshot of the How to play section](readme-doc/landing-page-image.jpg)
 
 * ### Quiz Container
-  * Users can discover new and exciting music form up-and-coming artists.
+  * An obvious button to start the quiz.
   * This is valuable for artist looking for new ways to showcase their work.
   * This is valuable for visitors searching for new music.
 

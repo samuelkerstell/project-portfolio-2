@@ -1,7 +1,7 @@
 # Premier League Quiz
 
 ## Welcome!
-[View the live project here]()
+[View the live project here](https://samuelkerstell.github.io/project-portfolio-2/)
 
 This website is designed to showcase up-and-coming producers and artists and provide a platform for them to promote their music to a wider audience.
 
@@ -16,38 +16,38 @@ This website is designed to showcase up-and-coming producers and artists and pro
   * When clicked you get back to the home page.
   * The header is valuable for users because it makes it obvious for the user what the site is about.
 
-![Screenshot of the navigation bar.](readme-doc/navigation-bar.jpg)
+![Screenshot of the navigation bar.](readme-images/header.png)
 
 * ### How to play container
   * 
   * 
   * 
 
-![Screenshot of the How to play section](readme-doc/landing-page-image.jpg)
+![Screenshot of the How to play section](readme-images/instructions.png)
 
 * ### Quiz Container
   * An obvious button to start the quiz.
   * This is valuable for artist looking for new ways to showcase their work.
   * This is valuable for visitors searching for new music.
 
-![Screenshot of quiz container](readme-doc/music-gallery.jpg)
+![Screenshot of quiz container](readme-images/quiz.png)
 
 * ### The Quiz Options
   * 
   * 
 
-![Screenshot of The game result](readme-doc/send-music.jpg)
+![Screenshot of The game result](readme-images/options.png)
 
 * ### The game result
   * 
   * 
 
-![Screenshot of The game result](readme-doc/send-music.jpg)
+![Screenshot of The game result](readme-images/result.png)
 
 * ### Background Image
   * 
 
-  ![Screenshot of the Background image](readme-doc/confirmation.png)
+  ![Screenshot of the Background image](readme-images/background.png)
 
 
 ## Future Features

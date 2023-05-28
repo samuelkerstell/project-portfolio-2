@@ -15,9 +15,10 @@ body {
     padding: 0;
     margin: 0;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
+    max-width: 100%;
     text-align: center;
-    background: url(../images/nathan-rogers-ObhCU6Vhoe8-unsplash.jpg) no-repeat center center;
+    background: url(../images/nathan-rogers-ObhCU6Vhoe8-unsplash.jpg) no-repeat left top;
     background-size: cover;
     color: white;
 }
@@ -36,7 +37,7 @@ a {
 .instruction-container {
     box-sizing: border-box;
     width: 800px;
-    max-width: 80%;
+    max-width: 75%;
     max-height: 450px;
     margin-left: auto;
     margin-right: auto;
@@ -56,7 +57,7 @@ li {
 .container {
     box-sizing: border-box;
     width: 800px;
-    max-width: 80%;
+    max-width: 75%;
     max-height: 450px;
     margin-left: auto;
     margin-right: auto;
@@ -123,3 +124,5 @@ li {
 .hide {
     display: none;
 }
+
+/* Media queries */

@@ -129,9 +129,8 @@ I've confirmed that the site is responsive and looks good on different screen si
 #### Solved Bugs
 * Score system
 
-* The site was experiencing horizontal scrolling. I fixed it by the following code to the body: max-width: 100%;
+* The site was experiencing horizontal scrolling. I fixed it by using the following code to the body: max-width: 100%;
 
-![Bug Fix](readme-doc/bug2.jpg)
 
 ## Validation Testing
 * HTML
@@ -171,8 +170,7 @@ The live link can be found here - [Premier League Quiz](https://samuelkerstell.g
  * Some of the code was inspired from this Youtube video from the user [Web Dev Simplified](https://www.youtube.com/watch?v=riDzcEQbX6k)
 
 ## Content
-* Instructions on how stick the footer to the bottom of the page was taken form this [page](https://dev.to/nehalahmadkhan/how-to-make-footer-stick-to-bottom-of-web-page-3i14)
-* Instructions on how to style audio elements was taken from this [blog page](https://blog.shahednasser.com/how-to-style-an-audio-element/)
-* Instructions on how to center an audio element was take from this [page](https://stackoverflow.com/questions/16823868/center-html-5-audio-players-for-all-browsers)
+* 
+
 ## Media
 * The background image was taken from [Unsplash](https://unsplash.com/photos/ObhCU6Vhoe8)

@@ -35,7 +35,7 @@ This website is a fun and engaging platform for football enthusiasts to test the
 * ### The Quiz Options
   * Green highlights for correct answers and red highlights for incorrect answers provide users with instant feedback.
   * Incorrect answers highlighted in red help users identify and learn from their mistakes.
-  * The feature solidifies users' understanding of the Premier League by visually reinforcing correct answers and aiding retention of key facts.
+  * The feature solidifies users understanding of the Premier League by visually reinforcing correct answers and aiding retention of key facts.
 
 ![Screenshot of The game result](readme-images/options.png)
 
@@ -61,8 +61,6 @@ This website is a fun and engaging platform for football enthusiasts to test the
 * ### Introduce Difficulty Levels:
    * Categorize questions into difficulty levels such as Easy, Medium, and Hard based on factors like complexity or depth of knowledge required.
    * Assign appropriate difficulty levels to each question in the quiz.
-
-
 
 # Testing
 
@@ -127,9 +125,10 @@ I've confirmed that the site is responsive and looks good on different screen si
 * Score is not updating until the next button is clicked.
 
 #### Solved Bugs
-* Score system
-
 * The site was experiencing horizontal scrolling. I fixed it by using the following code to the body: max-width: 100%;
+* The score was adding more than 1 if I pressed the correct answer multiple times. I fixed this by adding the highlighted code:
+
+![Bugfix1](readme-images/bug1.png) ![Bugfix2](readme-images/bug2.png) 
 
 
 ## Validation Testing
@@ -145,10 +144,9 @@ I've confirmed that the site is responsive and looks good on different screen si
 
 # Technologies Used
 
-## Frameworks, Libaries & Progams Used
+## Frameworks, Libraries & Progams Used
   * Hover:css was used on the buttons to show a transition when hovered over.
-  * [Google Fonts](https://fonts.google.com) was used to import the 'Prompt' font in the style.css file which is used on all text of the website.
-  * [Font awesome](https://fontawesome.com) was used for the icons in the footer.
+  * [Google Fonts](https://fonts.google.com) was used to import the 'Lilita One' font in the style.css file which is used on all text of the website.
   * [Git](https://gitpod.io) was used for version control system to manage code changes, and the Gitpod terminal to commit those changes to Git and push them to GitHub.
   * [GitHub](https://github.com) was used to store the project code after being pushed from gitpod.
   * [compressor.io](https://compressor.io) was used to compress the background image.
@@ -167,10 +165,7 @@ The live link can be found here - [Premier League Quiz](https://samuelkerstell.g
 
 # Credits
 ## Code Used
- * Some of the code was inspired from this Youtube video from the user [Web Dev Simplified](https://www.youtube.com/watch?v=riDzcEQbX6k)
-
-## Content
-* 
+ * Some of the JavaScript functions was inspired from this Youtube video from the user [Web Dev Simplified](https://www.youtube.com/watch?v=riDzcEQbX6k) because I wasn't 100% confident on how to go about this Quiz.
 
 ## Media
 * The background image was taken from [Unsplash](https://unsplash.com/photos/ObhCU6Vhoe8)

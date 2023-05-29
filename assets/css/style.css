@@ -1,16 +1,20 @@
 /* Fonts & Structural CSS */
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     font-family: 'Lilita One', cursive;
 }
 
+/* Inspired from this video (https://www.youtube.com/watch?v=riDzcEQbX6k) */
 :root {
     --hue-wrong: 338;
     --hue-correct: 145;
     --hue-btn: 223;
 }
 
+/* Image taken from (https://unsplash.com/photos/ObhCU6Vhoe8) */
 body {
     padding: 0;
     margin: 0;
@@ -41,7 +45,7 @@ a {
     max-height: 450px;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgba(0,0,0, 0.85);
+    background-color: rgba(0, 0, 0, 0.85);
     border-radius: 5px;
     padding: 20px;
     box-shadow: 0 0 10px 1px;
@@ -61,7 +65,7 @@ li {
     max-height: 450px;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgba(0,0,0, 0.85);
+    background-color: rgba(0, 0, 0, 0.85);
     border-radius: 5px;
     padding: 20px;
     box-shadow: 0 0 10px 1px;
@@ -88,19 +92,18 @@ li {
     color: white;
 }
 
+#result {}
+
+
+#question,
 #result {
-    
-}
-
-
-#question, #result {
     font-size: 130%;
 }
 
 .btn:hover {
-    border-color:white;
+    border-color: white;
 }
-
+/* Inspired from this video (https://www.youtube.com/watch?v=riDzcEQbX6k)*/
 .btn.correct {
     --hue: var(--hue-correct);
 }
@@ -109,7 +112,9 @@ li {
     --hue: var(--hue-wrong);
 }
 
-.start-btn, .next-btn, .submit-btn {
+.start-btn,
+.next-btn,
+.submit-btn {
     font-size: 1.5rem;
     font-weight: bold;
     padding: 10px 20px;
@@ -126,3 +131,24 @@ li {
 }
 
 /* Media queries */
+
+@media screen and (max-width: 415px) {
+    body {
+        height: 170vh;
+    }
+}
+
+/* Galaxy Fold */
+@media screen and (max-width: 330px) {
+    .instruction-container {
+        max-height: 630px;
+    }
+
+    .btn {
+        padding: 5px 10px;
+    }
+
+    .btn-grid {
+        gap: 2px;
+    }
+}

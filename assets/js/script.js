@@ -1,28 +1,34 @@
 // Gets the button elements
-let startButton = document.getElementById('start-btn')
-let nextButton = document.getElementById('next-btn')
-let submitButton = document.getElementById('submit-btn')
+let startButton = document.getElementById('start-btn');
+let nextButton = document.getElementById('next-btn');
+let submitButton = document.getElementById('submit-btn');
 
 // Gets question & answer elements
-let questionContainerElement = document.getElementById('question-container')
-let questionElement = document.getElementById('question')
-let resultContainerElement = document.getElementById('result-container')
-let resultElement = document.getElementById('result')
-let answerButtonsElement = document.getElementById('answer')
-let scoreElement = document.getElementById('score')
+let questionContainerElement = document.getElementById('question-container');
+let questionElement = document.getElementById('question');
+let resultContainerElement = document.getElementById('result-container');
+let resultElement = document.getElementById('result');
+let answerButtonsElement = document.getElementById('answer');
+let scoreElement = document.getElementById('score');
 
 let scoreCounter = 0;
 let shuffledQuestions = [];
 let currentQuestionIndex = 0;
 
-// Add event listeners to the start, next and submit buttons
-startButton.addEventListener('click', startGame)
-nextButton.addEventListener('click', () => {
-    currentQuestionIndex++
-    setNextQuestion()
-})
-submitButton.addEventListener('click', showResult)
 
+
+function initializeGame() {
+    // Add event listeners to the start, next and submit buttons
+    startButton.addEventListener('click', startGame);
+    nextButton.addEventListener('click', () => {
+        currentQuestionIndex++;
+        setNextQuestion();
+    });
+    submitButton.addEventListener('click', showResult);
+}
+
+
+// Some of the code in the functions was inspired from this youtube video [https://www.youtube.com/watch?v=riDzcEQbX6k]
 /**
  * Called when start button is clicked on
  * Sets the next question
@@ -30,19 +36,19 @@ submitButton.addEventListener('click', showResult)
  * Displays the score for the user
  */
 function startGame() {
-    startButton.classList.add('hide')
-    shuffledQuestions = QUESTIONS.sort(() => Math.random() - .5)
-    currentQuestionIndex = 0
-    questionContainerElement.classList.remove('hide')
-    setNextQuestion()
-    scoreCounter = 0
-    scoreElement.innerText = "Score: " + scoreCounter
-    resultContainerElement.classList.add('hide')
+    startButton.classList.add('hide');
+    shuffledQuestions = QUESTIONS.sort(() => Math.random() - .5);
+    currentQuestionIndex = 0;
+    questionContainerElement.classList.remove('hide');
+    setNextQuestion();
+    scoreCounter = 0;
+    scoreElement.innerText = "Score: " + scoreCounter;
+    resultContainerElement.classList.add('hide');
 }
 // Shows next question after you click the next button
 function setNextQuestion() {
-    resetState()
-    showQuestion(shuffledQuestions[currentQuestionIndex])
+    resetState();
+    showQuestion(shuffledQuestions[currentQuestionIndex]);
 }
 
 /**
@@ -50,18 +56,18 @@ function setNextQuestion() {
  * Gives feedback depending of score
  */
 function showResult() {
-    resultContainerElement.classList.remove('hide')
-    questionContainerElement.classList.add('hide')
-    startButton.innerText = 'Restart'
-    startButton.classList.remove('hide')
-    submitButton.classList.add('hide')
+    resultContainerElement.classList.remove('hide');
+    questionContainerElement.classList.add('hide');
+    startButton.innerText = 'Restart';
+    startButton.classList.remove('hide');
+    submitButton.classList.add('hide');
 
     if (scoreCounter === 6) {
-        resultElement.innerText = "Congrats you got maximum points!\n\nYour final is score: "+scoreCounter
+        resultElement.innerText = "Congrats you got maximum points!\n\nYour final score is: " + scoreCounter;
     } else if (scoreCounter > 3) {
-        resultElement.innerText = "Great job your final score is: "+ scoreCounter; + "/6"
+        resultElement.innerText = "Great job your final score is: " + scoreCounter + "/6";
     } else {
-        resultElement.innerText = 'Your final score is: '+ scoreCounter + "/6" + '\n\nTry again and see if you can beat it.'
+        resultElement.innerText = 'Your final score is: ' + scoreCounter + "/6" + '\n\nTry again and see if you can beat it.';
     }
 }
 
@@ -71,25 +77,29 @@ function showResult() {
  * Saves dataset to the correct button
  */
 function showQuestion(question) {
-    questionElement.innerText = question.question
+    questionElement.innerText = question.question;
     question.answer.forEach(answer => {
-        const button = document.createElement('button')
-        button.innerText = answer.text
-        button.classList.add('btn')
+        const button = document.createElement('button');
+        button.innerText = answer.text;
+        button.classList.add('btn');
         if (answer.correct) {
-            button.dataset.correct = answer.correct
-            scoreElement.innerText = "Score: " + scoreCounter
+            button.dataset.correct = answer.correct;
+            scoreElement.innerText = "Score: " + scoreCounter;
         }
-        button.addEventListener('click', selectAnswer)
-        answerButtonsElement.appendChild(button)
-    })
+        button.addEventListener('click', selectAnswer);
+        answerButtonsElement.appendChild(button);
+    });
 }
 // Resets everything back to default
 function resetState() {
-    nextButton.classList.add('hide')
+    nextButton.classList.add('hide');
     while (answerButtonsElement.firstChild) {
-        answerButtonsElement.removeChild(answerButtonsElement.firstChild)
+        answerButtonsElement.removeChild(answerButtonsElement.firstChild);
     }
+    Array.from(answerButtonsElement.children).forEach(button => {
+        button.disabled = false;
+    });
+
 }
 /**
  * Checks if answer is correct
@@ -98,37 +108,38 @@ function resetState() {
  * If there are no questions left the submit button will show up
  */
 function selectAnswer(event) {
-    const selectedButton = event.target
-    const correct = selectedButton.dataset.correct
+    const selectedButton = event.target;
+    const correct = selectedButton.dataset.correct;
     Array.from(answerButtonsElement.children).forEach(button => {
-        setStatusClass(button, button.dataset.correct)
-    })
+        button.disabled = true;
+        setStatusClass(button, button.dataset.correct);
+    });
 
     if (correct) {
-        scoreCounter++
-        console.log('CORRECT')
+        scoreCounter++;
     }
 
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
-        nextButton.classList.remove('hide')
+        nextButton.classList.remove('hide');
     } else {
-        submitButton.classList.remove('hide')
+        submitButton.classList.remove('hide');
     }
-    
+
 }
 
 // Removes the classes when called then adds them back
 function setStatusClass(element, correct) {
-    clearStatusClass(element)
+    clearStatusClass(element);
     if (correct) {
-        element.classList.add('correct')
+        element.classList.add('correct');
     } else {
-        element.classList.add('wrong')
+        element.classList.add('wrong');
     }
 }
 // Removes the classes when called
 function clearStatusClass(element) {
-    element.classList.remove('correct')
-    element.classList.remove('wrong')
+    element.classList.remove('correct');
+    element.classList.remove('wrong');
 }
-
+// Executes when the initial HTML document is loaded
+addEventListener("DOMContentLoaded", initializeGame);
